@@ -3,8 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  return <h1>مرحبًا بك في مشروعك!</h1>;
-}
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -29,3 +28,4 @@ export default function Home() {
       )}
     </div>
   );
+}
